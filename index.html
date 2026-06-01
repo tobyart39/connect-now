@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Connect</title>
+
+<meta property="og:title" content="Connect" />
+<meta property="og:description" content="Let's talk more privately" />
+<meta property="og:image" content="https://i.pinimg.com/736x/d2/42/c7/d242c7dd93e47fb750a7f5ce5b19ce7a.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background:#000;
+}
+
+.page{
+  width:100%;
+  max-width:430px;
+  min-height:100vh;
+  background:#000;
+  position:relative;
+  overflow:hidden;
+}
+
+.visual{
+  position:relative;
+  width:100%;
+  min-height:100vh;
+  background:#000;
+}
+
+/* Foto dibuat image asli, bukan background, supaya tidak crop di HP */
+.main-photo{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.12) 42%,
+    rgba(0,0,0,.74) 100%
+  );
+  pointer-events:none;
+}
+
+.top-nav{
+  position:absolute;
+  top:14px;
+  left:0;
+  right:0;
+  z-index:3;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:nowrap;
+  padding:0 10px;
+}
+
+.nav-btn{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:9px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.32);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  text-shadow:0 2px 8px rgba(0,0,0,.35);
+  white-space:nowrap;
+}
+
+.nav-btn img{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+}
+
+.content{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  z-index:2;
+  text-align:center;
+}
+
+.title{
+  font-size:24px;
+  line-height:1.12;
+  font-weight:800;
+  text-align:center;
+  margin-bottom:8px;
+  text-shadow:0 3px 12px rgba(0,0,0,.55);
+  white-space:nowrap;
+}
+
+.sub{
+  font-size:17px;
+  line-height:1.42;
+  color:rgba(255,255,255,.96);
+  text-align:center;
+  margin:0 auto 20px;
+  text-shadow:0 3px 12px rgba(0,0,0,.55);
+}
+
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:340px;
+  margin:0 auto 14px;
+  padding:17px 16px;
+  border-radius:23px;
+  background:rgba(37,211,102,.28);
+  border:1.5px solid rgba(37,211,102,.58);
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:.3px;
+  animation:pulse 1.4s infinite;
+  text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+
+.cta.secondary{
+  background:rgba(37,211,102,.28);
+  border:1.5px solid rgba(37,211,102,.58);
+}
+
+.wa-icon{
+  width:26px;
+  height:26px;
+  margin-right:12px;
+  position:relative;
+  top:-1px;
+}
+
+.small-note{
+  margin-top:10px;
+  font-size:12px;
+  color:rgba(255,255,255,.78);
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.025)}
+  100%{transform:scale(1)}
+}
+
+/* Khusus HP kecil */
+@media(max-width:380px){
+  .nav-btn{
+    font-size:13px;
+    padding:8px 9px;
+    gap:6px;
+  }
+
+  .nav-btn img{
+    width:18px;
+    height:18px;
+  }
+
+  .content{
+    left:16px;
+    right:16px;
+    bottom:14px;
+  }
+
+  .title{
+    font-size:21px;
+  }
+
+  .sub{
+    font-size:15.5px;
+    margin-bottom:16px;
+  }
+
+  .cta{
+    font-size:15.5px;
+    padding:15px 12px;
+    margin-bottom:12px;
+  }
+
+  .wa-icon{
+    width:23px;
+    height:23px;
+    margin-right:9px;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+  <section class="visual">
+    <img class="main-photo" src="https://i.pinimg.com/736x/d2/42/c7/d242c7dd93e47fb750a7f5ce5b19ce7a.jpg" alt="Photo" />
+
+    <nav class="top-nav">
+      <a class="nav-btn" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home">
+        <span>Home</span>
+      </a>
+
+      <a class="nav-btn" href="https://www.tiktok.com/@tarisa.putri366?_r=1&_t=ZS-96qzCso0KzV" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        <span>TikTok</span>
+      </a>
+
+      <a class="nav-btn" href="https://wa.me/6287775607145" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>WhatsApp</span>
+      </a>
+    </nav>
+
+    <div class="content">
+      <h1 class="title">Private Message Access💋</h1>
+      <p class="sub">Let’s talk more privately<br>I reply faster here🥰👇🏻</p>
+
+      <a class="cta" href="https://wa.me/6287775607145" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WhatsApp">
+        OPEN PRIVATE CHAT
+      </a>
+
+      <a class="cta secondary" href="https://exclusive-view.blogspot.com" target="_blank">
+        ▶ VIEW EXCLUSIVE VIDEO
+      </a>
+
+      <div class="small-note">online now • private access</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
