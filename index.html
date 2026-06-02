@@ -36,26 +36,27 @@ body{
 }
 
 .page{
-  width:100%;
-  max-width:430px;
-  min-height:100vh;
-  background:#000;
-  position:relative;
-  overflow:hidden;
+width:100%;
+max-width:430px;
+background:#000;
+position:relative;
+overflow:hidden;
 }
 
 .visual{
-  position:relative;
-  width:100%;
-  min-height:100vh;
-  background:#000;
+position:relative;
+width:100%;
+min-height:100vh;
+display:flex;
+align-items:flex-end;
 }
 
 /* Foto dibuat image asli, bukan background, supaya tidak crop di HP */
 .main-photo{
-  width:100%;
-  height:auto;
-  display:block;
+width:100%;
+height:auto;
+display:block;
+object-fit:contain;
 }
 
 .visual::after{
@@ -108,12 +109,12 @@ body{
 }
 
 .content{
-  position:absolute;
-  left:18px;
-  right:18px;
-  bottom:18px;
-  z-index:2;
-  text-align:center;
+position:absolute;
+left:18px;
+right:18px;
+bottom:80px;
+z-index:2;
+text-align:center;
 }
 
 .title{
