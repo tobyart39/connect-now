@@ -4,246 +4,54 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Connect</title>
-
 <meta property="og:title" content="Connect" />
 <meta property="og:description" content="Let's talk more privately" />
 <meta property="og:image" content="https://i.pinimg.com/736x/d2/42/c7/d242c7dd93e47fb750a7f5ce5b19ce7a.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
-}
-
-html,body{
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  background:#000;
-  color:#fff;
-  font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.page{
-  width:100%;
-  max-width:430px;
-  height:100vh;
-  height:100svh;
-  height:100dvh;
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.18) 45%, rgba(0,0,0,.62) 100%),
-    url("https://i.pinimg.com/736x/d2/42/c7/d242c7dd93e47fb750a7f5ce5b19ce7a.jpg") center top / cover no-repeat;
-}
-
-.top-nav{
-  position:absolute;
-  top:14px;
-  left:0;
-  right:0;
-  z-index:3;
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  padding:0 10px;
-}
-
-.nav-btn{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  padding:9px 12px;
-  border-radius:999px;
-  text-decoration:none;
-  color:#fff;
-  font-size:14px;
-  font-weight:700;
-  background:rgba(255,255,255,.16);
-  border:1px solid rgba(255,255,255,.32);
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-  text-shadow:0 2px 8px rgba(0,0,0,.35);
-  white-space:nowrap;
-}
-
-.nav-btn img{
-  width:20px;
-  height:20px;
-  object-fit:contain;
-}
-
-.content{
-    position:absolute;
-    left:18px;
-    right:18px;
-    bottom:0px !important;
-    z-index:2;
-    text-align:center;
-}
-
-.title{
-  font-size:24px;
-  line-height:1.12;
-  font-weight:800;
-  text-align:center;
-  margin-bottom:8px;
-  text-shadow:0 3px 12px rgba(0,0,0,.65);
-  white-space:nowrap;
-}
-
-.sub{
-  font-size:17px;
-  line-height:1.42;
-  color:rgba(255,255,255,.96);
-  text-align:center;
-  margin:0 auto 18px;
-  text-shadow:0 3px 12px rgba(0,0,0,.65);
-}
-
-.cta{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  max-width:340px;
-  margin:0 auto 12px;
-  padding:16px 14px;
-  border-radius:23px;
-  background:rgba(37,211,102,.28);
-  border:1.5px solid rgba(37,211,102,.58);
-  color:#fff;
-  text-decoration:none;
-  font-size:17px;
-  font-weight:800;
-  letter-spacing:.3px;
-  animation:pulse 1.4s infinite;
-  text-shadow:0 2px 8px rgba(0,0,0,.45);
-}
-
-.cta.secondary{
-  background:rgba(37,211,102,.28);
-  border:1.5px solid rgba(37,211,102,.58);
-}
-
-.wa-icon{
-  width:25px;
-  height:25px;
-  margin-right:11px;
-  position:relative;
-  top:-1px;
-}
-
-.small-note{
-  margin-top:8px;
-  font-size:12px;
-  color:rgba(255,255,255,.78);
-  text-shadow:0 2px 8px rgba(0,0,0,.45);
-}
-
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.025)}
-  100%{transform:scale(1)}
-}
-
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif}
+body{display:flex;justify-content:center;align-items:center}
+.page{width:100%;max-width:430px;height:100vh;height:100svh;height:100dvh;position:relative;overflow:hidden;background:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.18) 45%,rgba(0,0,0,.62) 100%),url("https://i.pinimg.com/736x/d2/42/c7/d242c7dd93e47fb750a7f5ce5b19ce7a.jpg") center top/cover no-repeat}
+.top-nav{position:absolute;top:14px;left:0;right:0;z-index:3;display:flex;justify-content:center;gap:8px;padding:0 10px}
+.nav-btn{display:flex;align-items:center;gap:7px;padding:9px 12px;border-radius:999px;text-decoration:none;color:#fff;font-size:14px;font-weight:700;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);text-shadow:0 2px 8px rgba(0,0,0,.35);white-space:nowrap}
+.nav-btn img{width:20px;height:20px;object-fit:contain}
+.content{position:absolute;left:18px;right:18px;bottom:72px!important;z-index:2;text-align:center}
+.title{font-size:24px;line-height:1.12;font-weight:800;text-align:center;margin-bottom:8px;text-shadow:0 3px 12px rgba(0,0,0,.65);white-space:nowrap}
+.sub{font-size:17px;line-height:1.42;color:rgba(255,255,255,.96);text-align:center;margin:0 auto 18px;text-shadow:0 3px 12px rgba(0,0,0,.65)}
+.cta{display:flex;align-items:center;justify-content:center;width:100%;max-width:340px;margin:0 auto 12px;padding:16px 14px;border-radius:23px;background:rgba(37,211,102,.28);border:1.5px solid rgba(37,211,102,.58);color:#fff;text-decoration:none;font-size:17px;font-weight:800;letter-spacing:.3px;animation:pulse 1.4s infinite;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+.cta.secondary{background:rgba(37,211,102,.28);border:1.5px solid rgba(37,211,102,.58)}
+.wa-icon{width:25px;height:25px;margin-right:11px;position:relative;top:-1px}
+.small-note{margin-top:8px;font-size:12px;color:rgba(255,255,255,.78);text-shadow:0 2px 8px rgba(0,0,0,.45)}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.025)}100%{transform:scale(1)}}
 @media(max-width:380px){
-  .top-nav{
-    gap:6px;
-    padding:0 6px;
-  }
-
-  .nav-btn{
-    font-size:12px;
-    padding:8px 8px;
-    gap:5px;
-  }
-
-  .nav-btn img{
-    width:17px;
-    height:17px;
-  }
-
-  .content{
-  left:14px;
-  right:14px;
-  bottom:0px !important;
-}
-
-  .title{
-    font-size:20px;
-  }
-
-  .sub{
-    font-size:14.5px;
-    margin-bottom:14px;
-  }
-
-  .cta{
-    font-size:14.5px;
-    padding:14px 10px;
-    margin-bottom:10px;
-  }
-
-  .wa-icon{
-    width:22px;
-    height:22px;
-    margin-right:8px;
-  }
-
-  .small-note{
-    font-size:11px;
-  }
+.top-nav{gap:6px;padding:0 6px}
+.nav-btn{font-size:12px;padding:8px 8px;gap:5px}
+.nav-btn img{width:17px;height:17px}
+.content{left:14px;right:14px;bottom:72px!important}
+.title{font-size:20px}
+.sub{font-size:14.5px;margin-bottom:14px}
+.cta{font-size:14.5px;padding:14px 10px;margin-bottom:10px}
+.wa-icon{width:22px;height:22px;margin-right:8px}
+.small-note{font-size:11px}
 }
 </style>
 </head>
-
 <body>
 <main class="page">
-
-  <nav class="top-nav">
-    <a class="nav-btn" href="#">
-      <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home">
-      <span>Home</span>
-    </a>
-
-    <a class="nav-btn" href="https://www.facebook.com/share/18gkjDsXLk/" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-<span>Facebook</span>
-</a>
-
-    <a class="nav-btn" href="https://wa.me/6287775607145" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-      <span>WhatsApp</span>
-    </a>
-  </nav>
-
-  <div class="content">
-    <h1 class="title">Private Message Access💋</h1>
-    <p class="sub">Let’s talk more privately<br>I reply faster here</p>
-
-    <a class="cta secondary" href="https://exclusive-view.blogspot.com" target="_blank">
-    ▶ VIEW EXCLUSIVE VIDEO
-</a>
-
-<a class="cta" href="https://wa.me/6287775607145" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WhatsApp">
-    OPEN PRIVATE CHAT
-</a>
-
-    <div class="small-note">online now • private access</div>
-  </div>
-
+<nav class="top-nav">
+<a class="nav-btn" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home"><span>Home</span></a>
+<a class="nav-btn" href="https://www.facebook.com/share/18gkjDsXLk/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"><span>Facebook</span></a>
+<a class="nav-btn" href="https://wa.me/6287775607145" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"><span>WhatsApp</span></a>
+</nav>
+<div class="content">
+<h1 class="title">Private Message Access💋</h1>
+<p class="sub">Let’s talk more privately<br>I reply faster here🥰👇🏻</p>
+<a class="cta secondary" href="https://exclusive-view.blogspot.com" target="_blank">▶ VIEW EXCLUSIVE VIDEO</a>
+<a class="cta" href="https://wa.me/6287775607145" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WhatsApp">OPEN PRIVATE CHAT</a>
+<div class="small-note">online now • private access</div>
+</div>
 </main>
 </body>
 </html>
